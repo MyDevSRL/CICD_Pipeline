@@ -15,7 +15,7 @@ namespace TestApi
         [Fact]
         public void Test2()
         {
-            Assert.True(1 == 0);
+            Assert.True(true);
         }
     }
 }

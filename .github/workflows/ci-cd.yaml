@@ -30,6 +30,6 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           server: 192.168.237.58
-          username: "web\giulio.bacchilega"
+          username: "web\\giulio.bacchilega"
           password: "&Imperiale1121"
           server-dir: "C:\inetpub\wwwroot\ProvaCICD_Giulio"

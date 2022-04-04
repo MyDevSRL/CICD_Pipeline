@@ -17,5 +17,11 @@ namespace TestApi
         {
             Assert.True(true); 
         }
+
+        [Fact]
+        public void Test3()
+        {
+            Assert.True("ciao".Equals("ciao"));
+        }
     }
 }

@@ -2,8 +2,7 @@ name: Continuous Integration And Deployement
 
 on:
   push:
-    branches: 
-      - main
+    branches: main
 
 
 jobs: 
@@ -23,5 +22,5 @@ jobs:
 
       - name: Build app
         run: dotnet build -c Release --no-restore
-        
+
       

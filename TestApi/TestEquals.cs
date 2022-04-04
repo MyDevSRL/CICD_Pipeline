@@ -21,7 +21,7 @@ namespace TestApi
         [Fact]
         public void Test3()
         {
-            Assert.True("ciao".Equals("ciao"));
+            Assert.True("ciao".Equals("ddddd"));
         }
     }
 }

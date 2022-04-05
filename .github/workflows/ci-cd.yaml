@@ -27,7 +27,7 @@ jobs:
         run: dotnet test -c Release --no-build
 
       - name: Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: 192.168.237.58
           username: "web\\giulio.bacchilega"

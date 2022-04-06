@@ -26,10 +26,11 @@ jobs:
       - name:  Run automated tests
         run: dotnet test -c Release --no-build
 
-      # - name: Deploy
-      #   uses: SamKirkland/FTP-Deploy-Action@4.0.0
-      #   with:
-      #     server: 192.168.237.58
-      #     username: "web\\giulio.bacchilega"
-      #     password: "&Imperiale1121"
-      #     server-dir: "C:/inetpub/wwwroot/ProvaCICD_Giulio/"
+      - name: Deploy
+        run: dotnet publish -c Release -o 192.168.237.58\c$\inetpub\wwwroot\ProvaCICD_Giulio --self-contained true
+        # uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        # with:
+        #   server: 192.168.237.58
+        #   username: "web\\giulio.bacchilega"
+        #   password: "&Imperiale1121"
+        #   server-dir: "C:/inetpub/wwwroot/ProvaCICD_Giulio/"

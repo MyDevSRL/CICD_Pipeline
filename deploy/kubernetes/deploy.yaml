@@ -9,7 +9,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: weather
-  namespace: sock-shop
+  namespace: test-pipeline
 spec:
   replicas: 1
   selector:

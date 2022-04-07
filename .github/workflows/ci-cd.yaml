@@ -32,13 +32,13 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }} 
           known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
 
-      - name: Deploy with rsync
-        run: rsync -avz ./dist/ giulio.bacchilega@192.168.237.58:/inetpub/wwwroot/ProvaCICD_Giulio/
+      # - name: Deploy with rsync
+      #   run: rsync -avz ./dist/ giulio.bacchilega@192.168.237.58:/inetpub/wwwroot/ProvaCICD_Giulio/
       # - name: Add msbuild to PATH
       #   uses: microsoft/setup-msbuild@v1.1
 
-      # - name: Deploy  
-      #   run: dotnet publish TestPipeline -c Release -o \\192.168.237.58\c$\inetpub\wwwroot\ProvaCICD_Giulio --self-contained false
+      - name: Deploy  
+        run: dotnet publish TestPipeline -c Release -o \\192.168.237.58\c$\inetpub\wwwroot\ProvaCICD_Giulio --self-contained false
         #run: msbuild TestPipeline /p:DeployOnBuild=true /p:PublishProfile=test
         # uses: SamKirkland/FTP-Deploy-Action@4.0.0
         # with:

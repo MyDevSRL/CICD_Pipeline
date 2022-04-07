@@ -26,6 +26,9 @@ jobs:
       - name:  Run automated tests
         run: dotnet test -c Release --no-build
 
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v1.1
+        
       - name: Deploy  
         run: msbuild TestPipeline /p:DeployOnBuild=true /p:PublishProfile=test
         #run: dotnet publish TestPipeline -c Release -o \\192.168.237.58\c$\inetpub\wwwroot\ProvaCICD_Giulio --self-contained false

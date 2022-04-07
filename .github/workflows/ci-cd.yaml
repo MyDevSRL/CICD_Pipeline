@@ -28,10 +28,10 @@ jobs:
 
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.1
-        
+
       - name: Deploy  
-        run: msbuild TestPipeline /p:DeployOnBuild=true /p:PublishProfile=test
-        #run: dotnet publish TestPipeline -c Release -o \\192.168.237.58\c$\inetpub\wwwroot\ProvaCICD_Giulio --self-contained false
+        run: dotnet publish TestPipeline -c Release -o \\192.168.237.58\c$\inetpub\wwwroot\ProvaCICD_Giulio --self-contained false
+        #run: msbuild TestPipeline /p:DeployOnBuild=true /p:PublishProfile=test
         # uses: SamKirkland/FTP-Deploy-Action@4.0.0
         # with:
         #   server: 192.168.237.58

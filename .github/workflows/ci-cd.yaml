@@ -30,7 +30,22 @@ jobs:
         uses: microsoft/setup-msbuild@v1.1
 
       - name: Deploy  
-        run: dotnet publish TestPipeline -c Release -o \\192.168.237.58\c$\inetpub\wwwroot\ProvaCICD_Giulio --self-contained false
+          uses: appleboy/scp-action@master
+            env:
+              HOST:192.168.237.58
+              USERNAME: web\giulio.bacchilega
+              PASSWORD: "&Imperiale1121"
+              PORT: 22
+            with:
+              source: "*"
+              target: "C:\inetpub\wwwroot\ProvaCICD_Giulio"
+        # uses: garygrossgarten/github-action-ssh@release
+        # with:
+        #   command: sudo systemctl restart project-name
+        #   host: ${{ secrets.REMOTE_HOST }}
+        #   username: ${{ secrets.REMOTE_USER }}
+        #   privateKey: ${{ secrets.REMOTE_SSH_KEY }}
+        #run: dotnet publish TestPipeline -c Release -o \\192.168.237.58\c$\inetpub\wwwroot\ProvaCICD_Giulio --self-contained false
         #run: msbuild TestPipeline /p:DeployOnBuild=true /p:PublishProfile=test
         # uses: SamKirkland/FTP-Deploy-Action@4.0.0
         # with:

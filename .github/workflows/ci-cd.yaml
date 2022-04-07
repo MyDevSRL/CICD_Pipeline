@@ -27,7 +27,7 @@ jobs:
         run: dotnet test -c Release --no-build
 
       - name: Deploy
-        run: dotnet publish TestPipeline -c Release -o \\192.168.237.58\c$\inetpub\wwwroot\ProvaCICD_Giulio --self-contained false
+        run: dotnet publish TestPipeline -c Release -o \\192.168.237.58/c$/inetpub/wwwroot/ProvaCICD_Giulio --self-contained false
         #run: dotnet publish -c Release -o 192.168.237.58\c$\inetpub\wwwroot\ProvaCICD_Giulio --self-contained false
         # uses: SamKirkland/FTP-Deploy-Action@4.0.0
         # with:

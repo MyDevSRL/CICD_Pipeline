@@ -31,9 +31,9 @@ jobs:
         with:
           key: ${{ secrets.SSH_PRIVATE_KEY }} 
           known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
-          
+
       - name: Deploy with rsync
-          run: rsync -avz ./dist/ giulio.bacchilega@$192.168.237.58:C:/inetpub/wwwroot/ProvaCICD_Giulio/
+        run: rsync -avz ./dist/ giulio.bacchilega@192.168.237.58:/inetpub/wwwroot/ProvaCICD_Giulio/
       # - name: Add msbuild to PATH
       #   uses: microsoft/setup-msbuild@v1.1
 

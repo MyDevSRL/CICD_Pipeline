@@ -32,9 +32,9 @@ jobs:
       - name: Deploy  
           uses: appleboy/scp-action@master
             env:
-              HOST:192.168.237.58
+              HOST: 192.168.237.58
               USERNAME: web\giulio.bacchilega
-              PASSWORD: "&Imperiale1121"
+              PASSWORD: '&Imperiale1121'
               PORT: 22
             with:
               source: "*"

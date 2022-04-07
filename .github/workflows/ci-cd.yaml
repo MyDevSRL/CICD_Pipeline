@@ -33,7 +33,7 @@ jobs:
           known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
       
       - name: Dotnet Publish
-        run: dotnet publish src -c Release -o deploy
+        run: dotnet publish TestPipeline -c Release -o deploy
       
       - name: Copy via ssh
         uses: garygrossgarten/github-action-scp@v0.5.3

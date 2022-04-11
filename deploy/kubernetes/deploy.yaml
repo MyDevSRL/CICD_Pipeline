@@ -75,3 +75,5 @@ spec:
     nodePort: 30001
   selector:
     name: weather
+  securityContext:
+    allowPrivilegeEscalation: false

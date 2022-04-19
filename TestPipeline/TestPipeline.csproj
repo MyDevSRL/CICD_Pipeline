@@ -8,15 +8,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="sqlscan-endpoints.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <_WebToolingArtifacts Remove="Properties\PublishProfiles\test.pubxml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="sqlscan-endpoints.txt" />
   </ItemGroup>
 	
   <ItemGroup>
+    <PackageReference Include="Cryptography.Standard" Version="1.1.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="TestPipeline\obj\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\Progetti\Workspace\Sequelizator\main\Sequelizator\Sequelizator\Sequelizator.csproj" />
   </ItemGroup>
 
 </Project>

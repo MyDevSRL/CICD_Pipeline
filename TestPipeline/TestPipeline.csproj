@@ -29,6 +29,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\Progetti\Workspace\Sequelizator\main\Sequelizator\Sequelizator\Sequelizator.csproj" />
+    <Reference Include="Sequelizator">
+      <HintPath>..\..\..\Sequelizator\Sequelizator\Sequelizator\bin\Debug\net6.0\Sequelizator.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

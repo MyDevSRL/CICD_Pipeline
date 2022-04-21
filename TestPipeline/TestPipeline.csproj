@@ -27,9 +27,4 @@
   <ItemGroup>
     <Folder Include="TestPipeline\obj\" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\Progetti\Workspace\Sequelizator\main\Sequelizator\Sequelizator\Sequelizator.csproj" />
-  </ItemGroup>
-
 </Project>

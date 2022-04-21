@@ -12,7 +12,7 @@ Creare username e password per l'account di ubuntu.
 
 # Abilitare systemd come sistema di boot in WSL: 
 - sudo -b unshare --pid --fork --mount-proc /lib/systemd/systemd --system-unit=basic.target
-- sudo -E nsenter --all -t $(pgrep -xo systemd) runuser -P -l $USER -c "exec $SHELL"
+- sudo -E nsenter --all -t $(pgrep -xo systemd) runuser -P -l $USER -c "exec $SHELL"
 - sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
 
 # Installazione K3S:
